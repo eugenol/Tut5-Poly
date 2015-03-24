@@ -4,7 +4,7 @@
 class Circle : public Shape
 {
 	float radius;
-	const float pi = 3.14159;
+	const float pi = 3.14159f;
 public:
 	Circle(float);
 	~Circle();
