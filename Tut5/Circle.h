@@ -3,8 +3,10 @@
 #include "Shape.h"
 class Circle : public Shape
 {
+	float radius;
+	const float pi = 3.14159;
 public:
-	Circle();
+	Circle(float);
 	~Circle();
 
 	void name();

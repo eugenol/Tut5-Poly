@@ -1,7 +1,8 @@
 #include "Circle.h"
 
-Circle::Circle()
+Circle::Circle(float r)
 {
+	radius = r;
 }
 
 
@@ -17,15 +18,15 @@ void Circle::name()
 
 float Circle::perimeter()
 {
-	return 0;
+	return 2 * pi*radius;
 }
 
 float Circle::area()
 {
-	return 0;
+	return pi*radius*radius;
 }
 
 void Circle::draw()
 {
-
+	std::cout << "Draw a circle" << std::endl;
 }

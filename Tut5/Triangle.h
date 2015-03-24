@@ -3,8 +3,9 @@
 #include "Shape.h"
 class Triangle : public Shape
 {
+	float sides; //equilater triangle
 public:
-	Triangle();
+	Triangle(float);
 	~Triangle();
 
 	void name();

@@ -3,8 +3,10 @@
 #include "Shape.h"
 class Rectangle : public Shape
 {
+	float length;
+	float width;
 public:
-	Rectangle();
+	Rectangle(float, float);
 	~Rectangle();
 
 	void name();
