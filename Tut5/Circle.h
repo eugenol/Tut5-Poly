@@ -6,5 +6,10 @@ class Circle : public Shape
 public:
 	Circle();
 	~Circle();
+
+	void name();
+	float area();
+	void draw();
+
 };
 #endif

@@ -6,5 +6,9 @@ class Triangle : public Shape
 public:
 	Triangle();
 	~Triangle();
+
+	void name();
+	float area();
+	void draw();
 };
 #endif
