@@ -1,9 +1,9 @@
 #include "Triangle.h"
 
 
-Triangle::Triangle()
+Triangle::Triangle(float s)
 {
-
+	sides = s;
 }
 
 
@@ -19,13 +19,13 @@ void Triangle::name()
 
 float Triangle::perimeter()
 {
-	return 0;
+	return 3*sides;
 }
 
 
 float Triangle::area()
 {
-	return 0;
+	return sqrt(3)/4*sides*sides;
 }
 
 void Triangle::draw()
