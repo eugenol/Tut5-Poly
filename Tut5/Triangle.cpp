@@ -30,5 +30,5 @@ float Triangle::area()
 
 void Triangle::draw()
 {
-
+	std::cout << "Draw a triangle" << std::endl;
 }

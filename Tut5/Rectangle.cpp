@@ -1,8 +1,10 @@
 #include "Rectangle.h"
 
 
-Rectangle::Rectangle()
+Rectangle::Rectangle(float l, float w)
 {
+	length = l;
+	width = w;
 }
 
 
@@ -19,15 +21,15 @@ void Rectangle::name()
 
 float Rectangle::perimeter()
 {
-	return 0;
+	return 2*(length+width);
 }
 
 float Rectangle::area()
 {
-	return 0;
+	return length*width;
 }
 
 void Rectangle::draw()
 {
-
+	std::cout << "Draw a rectangle" << std::endl;
 }
