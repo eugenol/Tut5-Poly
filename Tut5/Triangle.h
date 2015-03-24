@@ -8,6 +8,7 @@ public:
 	~Triangle();
 
 	void name();
+	float perimeter();
 	float area();
 	void draw();
 };

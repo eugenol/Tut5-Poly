@@ -8,6 +8,7 @@ public:
 	~Rectangle();
 
 	void name();
+	float perimeter();
 	float area();
 	void draw();
 };
