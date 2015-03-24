@@ -7,6 +7,7 @@
 
 int main(int argc, char* argv[])
 {
+	//Objects
 	Triangle T1(1.5);
 	Rectangle R1(1.5,1.5);
 	Circle C1(1.5);
@@ -15,8 +16,10 @@ int main(int argc, char* argv[])
 	Rectangle R2(1.5, 1.5);
 	Circle C2(1.5);
 
+	//Array of pointer to shape
 	Shape *shapePtr[10];
 
+	//Shape pointer to derived objects
 	shapePtr[0] = &T1;
 	shapePtr[1] = &R1;
 	shapePtr[2] = &C1;
@@ -29,11 +32,13 @@ int main(int argc, char* argv[])
 	C1.name();
 	std::cout << std::endl;
 
+	//Dynamically allocate :)
 	shapePtr[6] = new Triangle(1.0);
 	shapePtr[7] = new Rectangle(1.0,1.0);
 	shapePtr[8] = new Circle(1.0);
 	shapePtr[9] = new Rectangle(2.0, 1.5);
 
+	//Cycle through array, using shape pointer on all the objects.
 	for (int i = 0; i < 10; i++)
 	{
 		shapePtr[i]->name();
@@ -43,7 +48,7 @@ int main(int argc, char* argv[])
 		std::cout << std::endl;
 	}
 
-
+	//Clean up
 	delete shapePtr[6];
 	delete shapePtr[7];
 	delete shapePtr[8];
