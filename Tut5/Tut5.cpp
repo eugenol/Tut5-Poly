@@ -3,13 +3,14 @@
 #include "Triangle.h"
 #include "Rectangle.h"
 #include "Circle.h"
+#include "allegro5\allegro.h"
 
 
 int main(int argc, char* argv[])
 {
 	//Objects
 	Triangle T1(1.5);
-	Rectangle R1(1.5,1.5);
+	Rectangle R1(1.5, 1.5);
 	Circle C1(1.5);
 
 	Triangle T2(1.5);
@@ -37,6 +38,10 @@ int main(int argc, char* argv[])
 	shapePtr[7] = new Rectangle(1.0,1.0);
 	shapePtr[8] = new Circle(1.0);
 	shapePtr[9] = new Rectangle(2.0, 1.5);
+
+	if (!al_init())
+		return -1;
+
 
 	//Cycle through array, using shape pointer on all the objects.
 	for (int i = 0; i < 10; i++)
