@@ -1,21 +1,34 @@
 // Tut5.cpp : Defines the entry point for the console application.
 #include "Shape.h"
 #include "Triangle.h"
-#include "Rectangle.h"
 #include "Circle.h"
-#include "allegro5\allegro.h"
-
+#include "Rectangle1.h"
 
 int main(int argc, char* argv[])
 {
-	//Objects
-	Triangle T1(1.5);
-	Rectangle R1(1.5, 1.5);
-	Circle C1(1.5);
+	ALLEGRO_DISPLAY *display;
 
-	Triangle T2(1.5);
-	Rectangle R2(1.5, 1.5);
-	Circle C2(1.5);
+
+	if (!al_init())
+		return -1;
+
+	display = al_create_display(640, 480);
+	if (!display)
+		return -1;
+
+	al_init_primitives_addon();
+
+	al_clear_to_color(al_map_rgb(0, 0, 0));
+	al_flip_display();
+
+	//Objects
+	Triangle T1(50);
+	Rectangle1 R1(50,50);
+	Circle C1(50);
+
+	Triangle T2(20);
+	Rectangle1 R2(20, 20);
+	Circle C2(20);
 
 	//Array of pointer to shape
 	Shape *shapePtr[10];
@@ -34,13 +47,10 @@ int main(int argc, char* argv[])
 	std::cout << std::endl;
 
 	//Dynamically allocate :)
-	shapePtr[6] = new Triangle(1.0);
-	shapePtr[7] = new Rectangle(1.0,1.0);
-	shapePtr[8] = new Circle(1.0);
-	shapePtr[9] = new Rectangle(2.0, 1.5);
-
-	if (!al_init())
-		return -1;
+	shapePtr[6] = new Triangle(35);
+	shapePtr[7] = new Rectangle1(35,35);
+	shapePtr[8] = new Circle(35);
+	shapePtr[9] = new Rectangle1(35, 60);
 
 
 	//Cycle through array, using shape pointer on all the objects.
@@ -53,12 +63,18 @@ int main(int argc, char* argv[])
 		std::cout << std::endl;
 	}
 
+	al_flip_display();
+
 	//Clean up
 	delete shapePtr[6];
 	delete shapePtr[7];
 	delete shapePtr[8];
 	delete shapePtr[9];
 
+
+	al_rest(10.0);
+	//Destroy the display
+	al_destroy_display(display);
 
 	return 0;
 }

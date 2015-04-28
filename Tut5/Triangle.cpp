@@ -30,5 +30,7 @@ float Triangle::area()
 
 void Triangle::draw()
 {
+	int x = 320, y = 240;
 	std::cout << "Draw a triangle" << std::endl;
+	al_draw_triangle(x, y, x + sides, y, x, y + sides, al_map_rgb(255, 0, 0), 2);
 }

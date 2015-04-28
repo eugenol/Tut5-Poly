@@ -88,14 +88,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
-    <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="Rectangle1.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Tut5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
-    <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Rectangle1.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="Triangle.h" />
   </ItemGroup>

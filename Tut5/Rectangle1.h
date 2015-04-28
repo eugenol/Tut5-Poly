@@ -1,13 +1,13 @@
-#ifndef RECTANGLE_H
-#define RECTANGLE_H
+#ifndef RECTANGLE1_H
+#define RECTANGLE1_H
 #include "Shape.h"
-class Rectangle : public Shape
+class Rectangle1 : public Shape
 {
 	float length;
 	float width;
 public:
-	Rectangle(float, float);
-	~Rectangle();
+	Rectangle1(float, float);
+	~Rectangle1();
 
 	void name();
 	float perimeter();

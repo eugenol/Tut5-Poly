@@ -28,5 +28,7 @@ float Circle::area()
 
 void Circle::draw()
 {
+	int x = 320, y = 240;
 	std::cout << "Draw a circle" << std::endl;
+	al_draw_circle(x, y, radius, al_map_rgb(255, 0, 0),2);
 }

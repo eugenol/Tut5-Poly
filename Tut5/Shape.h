@@ -1,6 +1,8 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 #include <iostream>
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_primitives.h>
 
 class Shape
 {
